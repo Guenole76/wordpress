@@ -13,7 +13,7 @@
 <page-query>
 
 query {
-    allWordPressPost(limit: 3)
+    posts: allWordPressPost(limit: 3)
 
      {
         edges {
@@ -29,5 +29,16 @@ query {
         }
     }
 }
+</page-query>
 
 
+<script>
+import PostAbstract from '@/components/Post/Abstract.vue'
+
+export default {
+        components:{
+			   PostAbstract
+        }
+       
+}
+</script>

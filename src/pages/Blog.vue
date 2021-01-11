@@ -6,16 +6,22 @@
                         :post="post"
                         
                 />
+				<Pager :info="$page.posts.pageInfo" />
              
                 
         </layout>
 </template>
 <page-query>
 
-query {
-    allWordPressPost(limit: 3)
+query($page: Int) {
+    posts: allWordPressPost(perPage: 10, page: $page) @paginate{
+		pageInfo{
+			totalPages
+			currentPage
+		}
+	
 
-     {
+     
         edges {
             node {
                 id
@@ -35,9 +41,11 @@ query {
 
 <script>
 import PostAbstract from '@/components/Post/Abstract.vue'
+import { Pager } from 'gridsome'
 export default {
         components:{
-               PostAbstract 
+			   PostAbstract,
+			   Pager
         }
        
 }
