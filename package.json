@@ -1,0 +1,26 @@
+{
+  "name": "wordpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@gridsome/source-wordpress": "^0.5.3",
+    "@noxify/gridsome-plugin-remote-image": "^1.3.0",
+    "gridsome": "^0.7.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gridsome develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guenole76/wordpress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guenole76/wordpress/issues"
+  },
+  "homepage": "https://github.com/Guenole76/wordpress#readme"
+}
